@@ -3,6 +3,7 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
+title: Articles
 ---
 ## C++ advice
 {% for post in site.cppadvice %}
