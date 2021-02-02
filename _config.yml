@@ -24,9 +24,10 @@ github_username:  ashwinm76
 
 # Build settings
 markdown: kramdown
-theme: minima
+#theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
 
 collections:
   cppadvice:

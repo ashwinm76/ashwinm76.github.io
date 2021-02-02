@@ -4,7 +4,6 @@
 
 layout: home
 ---
-
 # C++ advice
 {% for post in site.cppadvice %}
   [{{ post.title }}]({{ post.url }})
