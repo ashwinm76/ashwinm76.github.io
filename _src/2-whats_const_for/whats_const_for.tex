@@ -1,0 +1,45 @@
+\makeatletter
+\def\input@path{{../sty/}}
+\makeatother
+
+\documentclass{article}
+\usepackage{cpp_advice}
+
+\begin{document}
+\title{What's Const For}
+\author{Ashwin Menon}
+\date{\today}
+\maketitle
+
+What good are \emph{const} variables? A good compiler would not allocate storage for
+them, and an enumeration achieves the same effect. According to Bjarne Stroustrupp
+in \emph{The C\texttt{++} Programming Language},
+
+\begin{displayquote}
+const’s primary role is to specify immutability in interfaces.
+\end{displayquote}
+
+Making an object \emph{const} does not specify how the compiler allocates storage
+for that object; instead, it places limitations on the usage of that object.
+Consider the \emph{strcpy} function:
+
+\begin{lstlisting}
+char *strcpy(char *dest, const char *src);
+\end{lstlisting}
+
+The source is a pointer to a \emph{const char}, which is how the designer of 
+\emph{strcpy} tells the compiler that \emph{strcpy} will not modify the source 
+string. This allows the compiler to make optimizations where possible.
+
+Consider the \emph{push\_back} method of \emph{vector}:
+
+\begin{lstlisting}
+void push_back(const T& value);
+\end{lstlisting}
+
+Not only is the argument passed by reference to avoid unnecessary copying, but
+the reference is also a \emph{const} which tells the compiler that \emph{push\_back}
+promises not to modify its argument. Accidental argument modifications within 
+\emph{push\_back} will therefore be flagged as an error by the compiler.
+
+\end{document}
