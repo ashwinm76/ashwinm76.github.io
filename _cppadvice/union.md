@@ -1,6 +1,7 @@
 ---
 layout: page
 title: "A tale of two unions"
+pdf: a_tale_of_two_unions.pdf
 ---
 
 Bjarne Stroustrup, in _The C++ Programming Language_, recommends avoiding the use

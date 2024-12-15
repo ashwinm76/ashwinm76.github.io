@@ -1,6 +1,7 @@
 ---
 layout: page
 title: "Be careful when you use unsigned"
+pdf: be_careful_using_unsigned.pdf
 ---
 
 There are some important pitfalls associated with using unsigned numeric types,

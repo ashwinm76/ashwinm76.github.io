@@ -1,6 +1,7 @@
 ---
 layout: page
 title: "Be careful when you use chars"
+pdf: be_careful_using_chars.pdf
 ---
 
 You might think that the `char` would be the perfect data type to represent byte

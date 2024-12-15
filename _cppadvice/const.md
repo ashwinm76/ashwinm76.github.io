@@ -1,6 +1,7 @@
 ---
 layout: page
 title: "What's const for?"
+pdf: whats_const_for.pdf
 ---
 
 What good are const variables? A good compiler would not allocate storage for them,
